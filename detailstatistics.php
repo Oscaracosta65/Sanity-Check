@@ -919,7 +919,8 @@ $sqlGames = "SELECT DISTINCT `game_id`, `game_name`
                CASE
                  WHEN `game_id` = '101' THEN 0
                  WHEN `game_id` = '113' THEN 1
-                 ELSE 2
+                 WHEN `game_id` = '145' THEN 2
+                 ELSE 3
                END,
                `game_name` ASC";
 $db->setQuery($sqlGames);
@@ -1266,6 +1267,11 @@ echo '</a>';
                 }else if($gName === 'Lucky For Life'){
                     
                     echo '<p class="lstResult">Last Result: '.date('m-d-Y',strtotime($dDate)).'<br /><br /><span class="circles">'.$posOne.'</span><span class="circles">'.$posTwo.'</span><span class="circles">'.$posThree.'</span><span class="circles">'.$posFour.'</span><span class="circles">'.$posFive.'</span><br /><span class="pplay">Cash Ball: <span class="circlesFb">'.$posSix.'</span></span></p>';
+
+                /** Millionaire for Life GAMES **/
+                }else if($gName === 'Millionaire for Life'){
+                    
+                    echo '<p class="lstResult">Last Result: '.date('m-d-Y',strtotime($dDate)).'<br /><br /><span class="circles">'.$posOne.'</span><span class="circles">'.$posTwo.'</span><span class="circles">'.$posThree.'</span><span class="circles">'.$posFour.'</span><span class="circles">'.$posFive.'</span><br /><span class="pplay">Bonus Ball: <span class="circlesFb">'.$posSix.'</span></span></p>';
 
            
 
