@@ -430,6 +430,26 @@ if(!empty($myData)){
             $pPosSix = str_replace("Lucky Ball:","",$dCb);
             $pPosSix = str_replace(" ","",$pPosSix);
         }
+        /** BREAK-DOWN Millionaire For Life RESULTS **/
+        if($game_name === 'Millionaire For Life'){
+            $rawResults = explode(",", $draw_results);
+            $rdNumbers = $rawResults[0];
+            $dCb = $rawResults[1];
+            $dNumbers = explode("-",$rdNumbers);
+
+            $pPosOne = $dNumbers[0];
+            $pPosOne = str_replace(" ","",$pPosOne);
+            $pPosTwo = $dNumbers[1];
+            $pPosTwo = str_replace(" ","",$pPosTwo);
+            $pPosThree = $dNumbers[2];
+            $pPosThree = str_replace(" ","",$pPosThree);
+            $pPosFour = $dNumbers[3];
+            $pPosFour = str_replace(" ","",$pPosFour);
+            $pPosFive = $dNumbers[4];
+            $pPosFive = str_replace(" ","",$pPosFive);
+            $pPosSix = str_replace("Bonus Ball:","",$dCb);
+            $pPosSix = str_replace(" ","",$pPosSix);
+        }
         /** BREAK-DOWN Lotto, Hoosier Lotto RESULTS **/
         if(($game_name === 'Lotto' && $stateprov_name != 'Illinois' && $stateprov_name != 'New York') || ($game_name === 'Hoosier Lotto' && $stateprov_name === 'Indiana')){
             $rawResults = explode("-", $draw_results);
